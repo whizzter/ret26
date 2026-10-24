@@ -1,3 +1,5 @@
+#pragma once
+#include <string>
 #include <string_view>
 #include <meta>
 
@@ -41,5 +43,12 @@ namespace ret26 {
         // consteval static_string& operator=(static_string&& other) = default;
         // consteval ~static_string() = default;
     };
+
+    consteval static_string operator+(const char * first,const static_string &second) {
+        std::string tmp;
+        tmp.append(first);
+        tmp.append(second.data(),second.size());
+        return static_string{std::define_static_string(tmp)};
+    }
 
 }
