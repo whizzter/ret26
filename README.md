@@ -11,4 +11,4 @@ Parts:
 - json26.hpp           : reflection enabled json (free-standing)
 - sql26/*.hpp          : reflection enabled Linq-like SQL access.
 - ret26/*.hpp          : convenience helpers and tools like async tasks
-- net26/(http|tcp).hpp : http and in general tcp servers (port of net26)
+- net26/(http|tcp).hpp : http and in general tcp servers (port of the old net11)
